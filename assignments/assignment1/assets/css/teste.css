@@ -1,0 +1,151 @@
+/* Adding fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Ovo&display=swap');
+
+/* Default Styles */
+header, footer {
+    font-family: "Anta", sans-serif;
+    font-size: 1.2rem;
+}
+
+main {
+    font-family: "Ovo", sans-serif;
+}
+
+body {
+    background-color: #CAD2C5;
+    color: #283618;
+}
+
+a {
+    color: #283C3E;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #283C3E;
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav, footer {
+    box-sizing: border-box;
+    background: rgba(132, 169, 140, 0.65);
+    border-radius: 5px;
+    height: 100px;
+    width: 960px;
+}
+
+#nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    text-decoration: none;
+}
+
+#nav-links li {
+    padding: 0 20px;
+}
+
+#home {
+    flex: 1;
+}
+
+/* Main Course Grid Container */
+#course-grid {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default 3 columns */
+    grid-template-rows: auto;
+    grid-row-gap: 15px;
+    grid-column-gap: 10px;
+    width: 100%; /* Ensure grid takes full width */
+}
+
+#page_title {
+    grid-column: 1/4;
+    color: #606c38;
+}
+
+/* Course Item Layout */
+.course_item {
+    background: rgba(132, 169, 140, 0.58);
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-areas:
+        "image number"
+        "image title"
+        "image description";
+}
+
+.course_image {
+    grid-area: image;
+}
+
+.course_number {
+    grid-area: number;
+}
+
+.course_title {
+    grid-area: title;
+}
+
+.course_description {
+    grid-area: description;
+}
+
+#footer-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+#footer-items li {
+    padding: 20px 0;
+}
+
+footer {
+    margin: 0 auto;
+}
+
+/* Responsive Layout for Smaller Screens */
+
+/* For screens below 640px, use 2 columns */
+@media screen and (max-width: 640px) {
+    #course-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+
+    .course_item {
+        grid-template-columns: 1fr 2fr; /* Keep the 1fr 2fr layout */
+        grid-template-areas:
+            "image number"
+            "image title"
+            "image description"; /* Keep the grid areas */
+    }
+}
+
+/* For screens below 400px, use 1 column */
+@media screen and (max-width: 400px) {
+    #course-grid {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+
+    .course_item {
+        grid-template-columns: 1fr; /* Stack content vertically */
+        grid-template-areas:
+            "image"
+            "number"
+            "title"
+            "description"; /* Stack all items vertically */
+    }
+}

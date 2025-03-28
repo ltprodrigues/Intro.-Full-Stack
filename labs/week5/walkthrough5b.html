@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leticia Rodrigues - Task 2</title>
+  <script>
+    //1. SUBSTRING => .substring(start, end)
+    let username = "George Brown";
+    let username1 = "George**Brown";
+    console.log("First name: ", username.substring(0,6));
+    console.log("Last name: ", username.substring(7,12));
+    //indexOf => position of the character where it starts
+    // syntax => varName.indexOf("symbol" + num. of times a symbol is repeated)
+    console.log("Position:", username.indexOf(" ")+1);
+    console.log("Position:", username1.indexOf("**")+2);
+    // .toUpperCase(), 2) .toLowerCase();
+    console.log(username.toUpperCase());
+    console.log(username.toLowerCase());
+    //2 Function => common var to generate result
+    //syntax => function nameFunction(arg/input){
+    // return result/return output
+    // }
+
+    function getFirstName(username){
+      let firstName = username.substring(0,6);
+      console.log("First Name: " + firstName)
+      return firstName;
+
+    }
+    //cal
+    getFirstName("George Brown");
+    getFirstName("Michael Smith");
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

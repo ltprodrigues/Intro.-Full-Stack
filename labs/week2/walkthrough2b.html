@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title - Leticia Rodrigues(Complex flexbox Layout)</title>
+<!--   Link tag: externally define css file-->
+<!--<link rel="stylesheet" href="demo.css">&ndash;&gt;-->
+
+  <style>
+    html {
+      font-family: "Roboto", sans-serif;
+    }
+
+    header {
+      background-color: #fdbc00;
+      height:100px;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+      margin: 0;
+      line-height: 100px;
+    }
+    section {
+      display: flex;
+      flex-direction: row;
+
+    }
+    article {
+      padding: 10px;
+      margin: 10px;
+      background-color: #99b3ff;
+      flex: 1 200px;
+    }
+  </style>
+</head>
+<body>
+<header><h1>COMPLEX FLEX LAYOUT</h1></header>
+<section>
+  <article>
+    <h2>Article 1</h2>
+    <p>Para 1</p>
+  </article>
+  <article>
+    <h2>Article 2</h2>
+    <p>Para 2</p>
+  </article>
+  <article>
+    <div>
+      <button> SMILE </button>
+      <button>  SHRINK </button>
+      <button>  LAUGH </button>
+      <button> CRY </button>
+    </div>
+    <p>Para 3</p>
+    <p>Para 4</p>
+  </article>
+</section>
+
+</body>
+</html>

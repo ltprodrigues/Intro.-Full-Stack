@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leticia Rodrigues - Task 1</title>
+  <style>
+    .wrapper {
+      display: grid;
+      /*******repeat(var1, var2)
+       var 1= no. of columns
+       var2 = amount of space in fraction
+       1 fr = 25%
+       total number of columns = 4
+       ****/
+      grid-template-columns: repeat(3, 1fr);
+      /******* MINIMUM = 100 HEIGHT OH THE ROW
+       MAXIMUM HEIGHT = 110 *******/
+      grid-auto-rows: minmax(100px, 110px);
+    }
+
+    div {
+      border: solid 1px darkgreen;
+    }
+    .item1 {
+      grid-column: 1/4; /**** one ocupies whole row *****/
+    }
+    /*****
+    when we have to apply css in child class number of rows will not be infinite
+    no. of rows = count the no. of element in the parent class(wrapper)
+    n=5;
+    ******/
+    .item2 {
+      /********
+      start = left, end = right;
+      ************/
+      grid-column-start: 1;
+      grid-row: 2/4;
+    }
+
+
+
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="item1">one</div>
+  <div class="item2">
+    Two
+    <p>I have more content in</p>
+    <p>This makes me taller than 100 pixels.</p>
+  </div>
+  <div class="item3">Three</div>
+  <div class="item4">Four</div>
+  <div class="item5">Five</div>
+</div>
+
+</body>
+</html>

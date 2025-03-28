@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leticia Rodrigues - tASK 4</title>
+    <script>
+        //Write a java script which can test expression patterns: pattern.test(var)
+        //1=> Pattern_literal: (‘/pop/’),
+        let pattern = new RegExp(/pop/)
+        let var1 = "lollipop";
+        let result1 = pattern.test(var1);
+        document.write(result1); //true/false
+        //2=> Pattern_phone: (‘/\(\d{3}\)\d{3}-\d{4}/’)
+        let pattern2 = new RegExp(/\(\d{3}\)\d{3}-\d{4}/)
+        let var2 = "(123)222-3333";
+        let result2 =  pattern2.test(var2);
+        document.write(result2);
+        //3=> Pattern_email: (‘/^[a-zA-Z\.]*@[a-zA-Z]+\.com$/’))
+        let pattern3 = new RegExp(/^[a-zA-Z\.]*@[a-zA-Z]+\.com$/);
+        let var3 = "lelelelele@lelelelele.com";
+        let result3 = pattern3.test(var3)
+        document.write(result3)
+
+        //Upload the work under public_html/comp1235/labs/week4/
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

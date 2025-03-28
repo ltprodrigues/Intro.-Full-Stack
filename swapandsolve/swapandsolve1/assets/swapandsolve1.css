@@ -1,0 +1,243 @@
+/* adding a google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=New+Amsterdam&display=swap');
+
+
+/* responsive layout */
+/* Stack menu vertically */
+@media (max-width: 768px) {
+    #navlinks {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    
+    }
+    
+    #navlinks ul {
+        align-items: center;
+        width: 100%;
+    }
+    
+    #navlinks li {
+        text-align: center;
+        padding: 10px;
+    }
+    #service-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    form {
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    }
+    
+    @media (max-width: 400px) {
+        #service-list {
+            grid-template-columns: 1fr;
+        }
+    
+        #contact iframe {
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+body {
+    font-family: "New Amsterdam", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    background-image: url("img/background2.jpg");
+    background-size: cover; /* Ensures the background image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed in place */
+    background-position: center; /* Centers the background image */
+}
+
+ul li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #621de0;
+    font-size: 1.5em;
+}
+
+header{
+
+    text-align: center;
+    padding: 200px 0;
+    border-radius: 40px;
+    height: 60vh;
+}
+h1 {
+    font-size: 3em;
+    color: #621de0;
+    text-shadow: 2px 2px 2px #888888;
+}
+h1 + p {
+    font-size: 1.5em;
+    color: #621de0;
+    text-shadow: 1px 1px 1px #888888;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+#navlinks {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #FFD447;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+#navlinks li {
+    display: inline;
+    padding: 70px;
+}
+
+nav, footer{
+    background-color: #FFD447;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+footer ul li {
+    margin: 0 20px;
+}
+
+h2{
+    text-align: center;
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px #888888;
+}
+
+section {
+    background-color: #939290a0;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888888;
+    
+}
+article {
+    background-color: #939290a0;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888888;
+    
+}
+
+#service-list {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; 
+    padding: 10px;
+}
+
+#service-list div {
+    background-color: #f0f0f093; 
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+#service-list div:hover {
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+#service-list div h3 {
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 2px #888888;
+}
+#service-list div p {
+    text-align: center;
+
+}
+#service-list div img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+img {
+    width: 30%;
+    height: auto;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+form {
+    width: 50%;
+    float: left;
+    padding: 30px;
+}
+
+
+label {
+    display: block;
+    margin: auto 0;
+    
+}
+input {
+    width: 34%;
+ }
+
+legend {
+    font-size: large;
+} 
+fieldset{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+address {
+    clear: both;
+    text-align: center;
+    font-size: medium;
+    margin: 10px;
+}
+
+button {
+    clear: both;
+    display: block;
+    background-color: #fdbc00;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+address + p {
+    text-align: center;
+    font-size: large;
+    margin: 10px;
+}
+

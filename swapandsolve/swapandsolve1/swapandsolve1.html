@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Karaoke Lounge</title>
+  <link rel="stylesheet" href="assets/swapandsolve1.css">
+</head>
+<body>
+<header>
+  <!-- nav bar with links to about, service and contact -->
+  <nav id="navlinks">
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <img class="logo" src="assets/img/mic.png" alt="microphone icon">
+  <h1>Welcome to Mic Drop Lounge</h1>
+  <p>A place to sing, dance and have fun</p>
+</header>
+<main>
+  <!-- about us section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+       aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, 
+      sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          Excepteur sint occaecat cupidatat non proident, 
+        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <!-- photo gallery -->
+      <img src="assets/img/karaokelounge.jpeg" alt="karaoke lounge image">
+      <img src="assets/img/karaokelounge1.jpeg" alt="karaoke lounge image">
+      <img src="assets/img/karaokebar.jpeg" alt="view from karaoke bar image">
+  </section>
+  <!-- service section with list of service in grid layout -->
+  <article id="service">
+    <h2>Service</h2>
+    <div id="service-list">
+      <div>
+        <h3>Private rooms</h3>
+        <img src="assets/img/privaterooms.jpeg" alt="private karaoke rooms icon">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+      </div>
+      <div>
+        <h3>Open Mic</h3>
+        <img src="assets/img/openmic.jpeg" alt="open mic icon">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+      </div>
+      <div>
+        <h3>Special Events</h3>
+        <img src="assets/img/specialevents.jpeg" alt="food and drinks icon">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+      </div>
+      <div>
+        <h3>Foods & drinks</h3>
+        <img src="assets/img/foodanddrinks.jpeg" alt="foods and drinks icon">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+      </div>
+      <div>
+        <h3>VIP & membership perks</h3>
+        <img src="assets/img/membership.jpeg" alt="karaoke membership icon">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+      </div>
+    </div>
+  </article>
+  <!-- contact section with google map, contact form and contact information -->
+  <section id="contact">
+      <h2>Contact</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8105.2588429519365!2d-79.41102129333976!3d43.67783215426263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b349c06ccb215%3A0xecdab22933de4639!2sGeorge%20Brown%20College%20-%20Casa%20Loma%20Campus%20-%20F%20Building!5e0!3m2!1sen!2sca!4v1738985089055!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <form id="contactform" onsubmit="getUserFeedback(event)">
+        <fieldset>
+        <legend>Contact Us</legend>
+        <label for="name" id="myFocus" onfocus="myFocus()">Name</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <button type="submit">Send</button>
+      </fieldset>
+      </form>
+  
+      <p id="feedbackMessage" style="display: none; color: green;"></p>
+  
+      <address> 321 Main Street - Toronto, Ontario </address>
+      <p>Call us: <a href="tel:phoneNumber">(123)123 - 4567</a><br>
+      <a href="mailto:emailAddress">karaokeloungebar@email.com</a></p>
+    </section>
+</main>
+<!-- footer with copy right and karaoke name -->
+<footer>
+  <ul>
+    <li>&copy; 2025</li>
+    <li>Mic Drop Karaoke Lounge</li>
+  </ul>
+</footer>
+<script>
+
+  function getUserFeedback(event) {
+    event.preventDefault();
+
+    const userFeedback = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value
+    };
+    const feedbackMessage = document.getElementById('feedbackMessage');
+    let messageContent = 'Thank you for your feedback! Here are the details you submitted:<br>';
+
+    for (let key in userFeedback) {
+      if (userFeedback.hasOwnProperty(key)) {
+        messageContent += `<strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${userFeedback[key]}<br>`;
+      }
+    }
+    feedbackMessage.innerHTML = messageContent;
+    feedbackMessage.style.display = 'block';
+  }
+
+  let x = document.getElementById("myFocus");
+  x.addEventListener("focus", myFocus, true);
+
+  function myFocus() {
+    document.getElementById("myFocus").style.backgroundColor = "yellow";
+  }
+  </script>
+
+</body>
+</html>

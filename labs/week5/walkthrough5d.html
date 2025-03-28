@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid layout</title>
+    <style>
+        .container {
+            display: grid; /* width: 33.33% */
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+        div {
+            border: 2px solid black;
+            background: #fdbc00;
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+                /* width: 100% */
+            }
+            div {
+                border: 2px solid black;
+                background: deeppink;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div>
+</body>
+</html>
