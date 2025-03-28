@@ -3,6 +3,13 @@
 const chai = window.chai;
 const expect = chai.expect;
 
+describe('Get Random Number', () => {
+    it('should return a random number between 1 and 5', async () => {
+        const randomNumber = await getRandomNumber();
+        expect(randomNumber).to.be.within(1, 5);
+    });
+})
+
 /***************************************************************************************
  Testing TEMPLATES
 
